@@ -12,7 +12,7 @@ return new class extends Migration {
             $table->string('title'); // Project Title
             $table->enum('status', ['ongoing', 'completed', 'archived'])
                   ->default('ongoing'); // Status
-            $table->text('description')->nullable(); // Description
+            $table->text('description'); // Description
             $table->timestamps(); // created_at, updated_at
         });
     }

@@ -72,7 +72,7 @@ class ProjectController extends Controller
             ],422);
         }
 
-        $project ->update([
+        $project->update([
             'title' => $request->title,
             'status' => $request->status,
             'description' => $request->description,
