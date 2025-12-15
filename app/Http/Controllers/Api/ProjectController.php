@@ -58,8 +58,7 @@ class ProjectController extends Controller
 
      public function update(Request $request, Project $project)
     {
-        dd($request->all()); // <-- debug
-        
+
         $validator =Validator::make($request->all(),[
                             'title' => 'required|string|max:255',
                             'status' => 'required|in:ongoing,completed,archived',
