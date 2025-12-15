@@ -16,6 +16,9 @@ Route::get('/test', function() {
         'all_routes' => \Illuminate\Support\Facades\Route::getRoutes()->get()
     ]);
 });
+Route::get('/check-pgsql', function() {
+    return extension_loaded('pdo_pgsql') ? 'pdo_pgsql loaded' : 'pdo_pgsql missing';
+});
 
 
 
